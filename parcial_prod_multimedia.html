@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Práctica Final - Programación Concurrente y Paralela</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --fondo:#f5f5f5;--seccion:#fff;--secundario:#0077cc;--texto:#333;--acento:#2ecc71;--maxwidth:1000px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Roboto";background:var(--fondo);color:var(--texto);line-height:1.6}
+    .container{max-width:var(--maxwidth);margin:24px auto;padding:0 16px}
+    header{background:linear-gradient(90deg,var(--seccion),#eaf6ff);padding:20px;border-radius:12px;display:flex;align-items:center;gap:16px}
+    .logo{width:84px;height:84px;border-radius:8px;background:linear-gradient(135deg,var(--secundario),var(--acento));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:"Poppins"}
+    h1{margin:0;font-family:"Poppins"}
+    .card{background:var(--seccion);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(20,30,50,0.06)}
+    main{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:20px}
+    section{background:var(--seccion);padding:18px;border-radius:10px}
+    h2{font-family:"Poppins";color:var(--secundario)}
+    ul{padding-left:1.2rem}
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{padding:8px;border:1px solid #e6e6e6}
+    @media(max-width:900px){main{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">PCP</div>
+      <div>
+        <h1>Programación Concurrente y Paralela</h1>
+        <p>Estudiante: Nombre del Estudiante | Grupo 001</p>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>Introducción</h2>
+        <p>
+          La programación concurrente y paralela permite que múltiples tareas se ejecuten de manera simultánea o
+          solapada, optimizando el rendimiento de sistemas modernos, especialmente en entornos con múltiples núcleos.
+        </p>
+
+        <h2>Conceptos clave</h2>
+        <ul>
+          <li><strong>Concurrencia:</strong> Capacidad de un sistema para gestionar varias tareas al mismo tiempo, aunque no necesariamente ejecutándolas de manera simultánea.</li>
+          <li><strong>Paralelismo:</strong> Ejecución real y simultánea de tareas en diferentes núcleos o unidades de procesamiento.</li>
+          <li><strong>Hilos (threads):</strong> Unidades de ejecución dentro de un proceso.</li>
+          <li><strong>Procesos:</strong> Programas en ejecución con memoria propia.</li>
+          <li><strong>Síncronización:</strong> Control del acceso a recursos compartidos.</li>
+        </ul>
+
+        <h2>Ventajas</h2>
+        <ul>
+          <li>Mejor uso del hardware disponible.</li>
+          <li>Mayor velocidad en operaciones costosas.</li>
+          <li>Permite diseñar sistemas reactivos y eficientes.</li>
+        </ul>
+
+        <h2>Desventajas</h2>
+        <ul>
+          <li>Complejidad en la gestión de recursos.</li>
+          <li>Errores como condiciones de carrera y bloqueos mutuos.</li>
+        </ul>
+
+        <h2>Ejemplo en pseudocódigo</h2>
+        <pre>
+Proceso A:
+  imprimir("Tarea A ejecutándose")
+
+Proceso B:
+  imprimir("Tarea B ejecutándose")
+
+Ejecutar en paralelo: A y B
+        </pre>
+
+        <h2>Tabla comparativa</h2>
+        <table>
+          <tr><th>Aspecto</th><th>Concurrencia</th><th>Paralelismo</th></tr>
+          <tr><td>Ejecución</td><td>Intercalada</td><td>Simultánea</td></tr>
+          <tr><td>Uso de núcleos</td><td>Uno o varios</td><td>Varios</td></tr>
+        </table>
+
+        <h2>Conclusión</h2>
+        <p>
+          La programación concurrente y paralela es esencial en el desarrollo moderno, permitiendo aprovechar
+          arquitecturas multinúcleo, mejorar el rendimiento y crear aplicaciones más eficientes.
+        </p>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3>Recursos recomendados</h3>
+          <ul>
+            <li>Documentación de hilos POSIX.</li>
+            <li>Modelos de concurrencia (Go, Erlang).</li>
+            <li>Libros de arquitectura de computadores.</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer style="text-align:center;margin-top:25px;color:#666">Proyecto — Programación Concurrente y Paralela — 2025</footer>
+  </div>
+</body>
+</html>
